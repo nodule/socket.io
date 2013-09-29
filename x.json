@@ -1,0 +1,93 @@
+{
+  "name": "http",
+  "description": "HTTP nodes for Chiχ",
+  "version": "0.0.3",
+  "licences": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/psichi/chix/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psichi/chix-http.git"
+  },
+  "dependencies": {},
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "socket": {
+            "type": "function",
+            "title": "io socket handle",
+            "description": "Expects an socket.io socket node.",
+            "readonly": true,
+            "required": true
+          },
+          "data": {
+            "type": "object",
+            "title": "data object",
+            "description": "Expects a json data object.",
+            "readonly": true,
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "description": "Creates an io socket server object",
+      "name": "emit",
+      "ns": "http",
+      "fn": "input.socket.emit(input.name, input.data)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "app": {
+            "type": "function",
+            "title": "HTTP server handle",
+            "description": "Expects a http or express server node object.",
+            "readonly": true,
+            "required": true
+          }
+        },
+        "output": {
+          "io": {
+            "type": "object",
+            "title": "io socket server object"
+          }
+        }
+      },
+      "require": {
+        "socket.io": "latest"
+      },
+      "description": "Creates an io socket server object",
+      "name": "listen",
+      "ns": "http",
+      "fn": "output = { io: socket_io.listen(input.app) }\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "io": {
+            "type": "function",
+            "title": "io socket server handle",
+            "description": "Expects a io socket server node.",
+            "readonly": true,
+            "required": true
+          }
+        },
+        "output": {
+          "socket": {
+            "type": "function",
+            "title": "io socket object"
+          }
+        }
+      },
+      "description": "Creates an io socket server object",
+      "name": "on",
+      "ns": "http",
+      "fn": "output = [input.io.sockets, 'on']\n"
+    }
+  ],
+  "twigs": []
+}

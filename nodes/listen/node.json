@@ -1,0 +1,24 @@
+{
+  "name":"listen",
+  "description":"Creates an io socket server object",
+  "require":{
+    "socket.io":"latest"
+  },
+  "ports":{
+    "input":{
+      "app":{
+        "type":"function",
+        "title":"HTTP server handle",
+        "description":"Expects a http or express server node object.",
+        "readonly": true,
+        "required": true
+      }
+    },
+    "output":{
+      "io":{
+        "type":"object",
+        "title":"io socket server object"
+      }
+    }
+  }
+}

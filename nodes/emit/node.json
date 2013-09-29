@@ -1,0 +1,24 @@
+{
+  "name":"emit",
+  "description":"Creates an io socket server object",
+  "ports":{
+    "input":{
+      "socket":{
+        "type":"function",
+        "title":"io socket handle",
+        "description":"Expects an socket.io socket node.",
+        "readonly": true,
+        "required": true
+      },
+      "data":{
+        "type":"object",
+        "title":"data object",
+        "description":"Expects a json data object.",
+        "readonly": true,
+        "required": true
+      }
+    },
+    "output":{
+    }
+  }
+}
