@@ -1,18 +1,14 @@
 {
-  "name": "http",
-  "description": "HTTP nodes for Chiχ",
-  "version": "0.0.3",
-  "licences": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/psichi/chix/raw/master/LICENSE"
-    }
-  ],
+  "name": "socket-io",
+  "description": "Socket.io nodes for Chiχ",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psichi/chix-http.git"
+    "url": "https://github.com/nodule/socket.io.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "socket.io": "0.x.x"
+  },
   "nodes": [
     {
       "ports": {
@@ -36,7 +32,7 @@
       },
       "description": "Creates an io socket server object",
       "name": "emit",
-      "ns": "http",
+      "ns": "socket-io",
       "fn": "input.socket.emit(input.name, input.data)\n"
     },
     {
@@ -62,7 +58,7 @@
       },
       "description": "Creates an io socket server object",
       "name": "listen",
-      "ns": "http",
+      "ns": "socket-io",
       "fn": "output = { io: socket_io.listen(input.app) }\n"
     },
     {
@@ -85,7 +81,7 @@
       },
       "description": "Creates an io socket server object",
       "name": "on",
-      "ns": "http",
+      "ns": "socket-io",
       "fn": "output = [input.io.sockets, 'on']\n"
     }
   ],
