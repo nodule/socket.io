@@ -1,5 +1,6 @@
 {
   "name":"emit",
+  "ns":"socket.io",
   "description":"Creates an io socket server object",
   "ports":{
     "input":{

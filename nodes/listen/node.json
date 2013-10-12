@@ -1,5 +1,6 @@
 {
   "name":"listen",
+  "ns":"socket.io",
   "description":"Creates an io socket server object",
   "require":{
     "socket.io":"latest"

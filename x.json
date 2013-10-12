@@ -31,8 +31,8 @@
         "output": {}
       },
       "description": "Creates an io socket server object",
+      "ns": "socket.io",
       "name": "emit",
-      "ns": "socket-io",
       "fn": "input.socket.emit(input.name, input.data)\n"
     },
     {
@@ -57,8 +57,8 @@
         "socket.io": "latest"
       },
       "description": "Creates an io socket server object",
+      "ns": "socket.io",
       "name": "listen",
-      "ns": "socket-io",
       "fn": "output = { io: socket_io.listen(input.app) }\n"
     },
     {
@@ -80,8 +80,8 @@
         }
       },
       "description": "Creates an io socket server object",
+      "ns": "socket.io",
       "name": "on",
-      "ns": "socket-io",
       "fn": "output = [input.io.sockets, 'on']\n"
     }
   ],
