@@ -1,1 +1,3 @@
-output = { io: socket_io.listen(input.app) }
+output = {
+  io: socket_io.listen(input.app)
+}
