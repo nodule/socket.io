@@ -1,1 +1,3 @@
-input.socket.emit(input.name, input.data)
+output = function() {
+  $.socket.emit($.name, $.data)
+}

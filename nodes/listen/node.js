@@ -1,3 +1,3 @@
 output = {
-  io: socket_io.listen(input.app)
+  io: socket_io.listen($.app)
 }
